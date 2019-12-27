@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<app-search (searchInputEvent)="filterAlbuns($event)"></app-search>
+
+<p>
+<button mat-raised-button color="primary" matBadgePosition="before" matBadgeColor="accent" matBadgeSize="large">
+    {{contador}}
+  </button>
+</p>
+<section class="container">
+    <app-album-list [albums]="filteredAlbuns"></app-album-list>
+</section>
